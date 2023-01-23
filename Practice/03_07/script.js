@@ -11,7 +11,7 @@ const waterBottle = {
   color: "blue",
   size: "small",
   shape: "round",
-  empty: false,
+  bottleOpacity: false,
   temperature: 20,
   labelNames: ["embed", "sticker"],
   changeTemp: function (newTemp) {
@@ -20,10 +20,12 @@ const waterBottle = {
   liquid: {
     name: "water",
     composition: ["hydrogen", "oxygen"],
-    opacity: 0,
+    liquidOpacity: 0,
     addJuice: function (juiceAmount) {
-      return (this.opacity += juiceAmount);
+      return (this.liquidOpacity += juiceAmount);
     },
   },
   weight: "heavy",
 };
+
+console.log(waterBottle);
